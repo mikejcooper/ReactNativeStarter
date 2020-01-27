@@ -1,0 +1,54 @@
+{
+  "name": "ReactNativeStarter",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@react-native-community/async-storage": "^1.7.1",
+    "@react-native-community/masked-view": "^0.1.5",
+    "@types/await-timeout": "^0.3.1",
+    "@types/axios": "^0.14.0",
+    "@types/node": "^13.1.4",
+    "@types/react": "^16.9.17",
+    "@types/react-dom": "^16.9.4",
+    "@types/react-native": "^0.60.31",
+    "@types/react-redux": "^7.1.5",
+    "await-timeout": "^1.1.1",
+    "await-to-js": "^2.1.1",
+    "axios": "^0.19.0",
+    "date-fns": "^2.9.0",
+    "native-base": "^2.13.8",
+    "react": "^16.12.0",
+    "react-native": "^0.61.5",
+    "react-native-config": "^0.12.0",
+    "react-native-gesture-handler": "^1.5.3",
+    "react-native-keyboard-aware-scroll-view": "^0.9.1",
+    "react-native-radial-gradient": "^1.0.6",
+    "react-native-reanimated": "^1.4.0",
+    "react-native-safe-area-context": "^0.6.2",
+    "react-native-screens": "^2.0.0-alpha.22",
+    "react-navigation": "^4.0.10",
+    "react-navigation-stack": "^2.0.10",
+    "react-navigation-tabs": "^2.7.0",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.5",
+    "redux-persist": "^6.0.0",
+    "redux-saga": "^1.1.3"
+  },
+  "devDependencies": {
+    "jest": "^24.9.0",
+    "metro-react-native-babel-preset": "^0.58.0",
+    "prettier": "^1.19.1",
+    "react-test-renderer": "16.12.0",
+    "tslint": "^5.20.1",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-plugin-prettier": "^2.1.0",
+    "typescript": "^3.5.3"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
