@@ -1,22 +1,42 @@
 import Actions from "src/actions"
 import { types } from "src/actions/Settings"
+import { State } from "react-native-gesture-handler"
 
 export interface INavigationState {
-  number: number
+  firstName: String
+  secondName: String
+  email: String
 }
 
 const initialState: INavigationState = {
-  number: 0,
+  firstName: "John",
+  secondName: "Smith",
+  email: "john.smith@gmail.com",
 }
 
 export default function settings(state: INavigationState = initialState, action: any = {}) {
+  console.log(action.type)
   switch (action.type) {
-    case types.DO_SOMETHING_REQUEST: {
-      const _action = action as ReturnType<typeof Actions.Settings.doSomething>
-      const value = _action.payload // do something with value
+    case "Change_firstName": {
+      state.firstName = action.value
       return {
         ...state,
-        number: state.number + 1,
+        firstName: state.firstName,
+      }
+    }
+    case "Change_secondName": {
+      state.secondName = action.value
+      return {
+        ...state,
+        secondName: state.secondName,
+      }
+    }
+
+    case "Change_email": {
+      state.email = action.value
+      return {
+        ...state,
+        email: state.email,
       }
     }
     default:

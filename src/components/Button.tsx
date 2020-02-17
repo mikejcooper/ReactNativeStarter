@@ -15,8 +15,9 @@ const Square: FunctionComponent<ButtonProps> = props => (
     style={{
       flexDirection: "row",
       justifyContent: "center",
-      backgroundColor: Colors.DARK_GREY,
-      width: "100%",
+      backgroundColor: Colors.WHITE,
+      borderColor: Colors.GREY,
+      width: "25%",
       padding: Scale.vs(20),
     }}
     onPress={props.onPress}
@@ -25,7 +26,7 @@ const Square: FunctionComponent<ButtonProps> = props => (
       style={{
         fontFamily: Fonts.DEFAULT,
         fontSize: Scale.ts(18),
-        color: Colors.BACKGROUND,
+        color: Colors.ACCENT_LIGHT_BLUE,
       }}
     >
       {props.text}

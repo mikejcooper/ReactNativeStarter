@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react"
 import { View } from "react-native"
-
+import { Header } from "native-base"
 interface SettingsProps {
   style?: any
 }
@@ -14,7 +14,7 @@ const Settings: FunctionComponent<SettingsProps> = props => (
         elevation: 1,
         marginVertical: 5,
         padding: 10,
-        width: "100%",
+        width: "90%",
       },
       props.style,
     ]}

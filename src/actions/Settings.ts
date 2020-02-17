@@ -1,12 +1,28 @@
 export const types = {
-  DO_SOMETHING_REQUEST: "@/settings/DO_SOMETHING_REQUEST",
+  Change_firstName: "@/settings/Change_firstName",
+  Change_secondName: "@/settings/Change_secondName",
+  Change_email: "@/settings/Change_email",
 }
 
-function doSomething(value: number) {
+function changeFirstName(value: String) {
   return {
-    type: types.DO_SOMETHING_REQUEST,
+    type: types.Change_firstName,
     payload: value,
   }
 }
 
-export default { doSomething }
+function changeSecondName(value: String) {
+  return {
+    type: types.Change_secondName,
+    payload: value,
+  }
+}
+
+function changeEmail(value: String) {
+  return {
+    type: types.Change_email,
+    payload: value,
+  }
+}
+
+export default { changeFirstName, changeSecondName, changeEmail }

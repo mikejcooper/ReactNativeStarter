@@ -7,24 +7,43 @@ import { Button } from "src/components/Button"
 import { Card } from "src/components/Card"
 import Types from "src/config/types"
 import { SettingsComponents } from "src/screens/settings/components"
+import { Title, View } from "native-base"
+import { Container, Header, Left, Body, Right, Icon } from "native-base"
+import Navigation from "src/actions/Navigation"
 
 class Settings extends Component<IProps, {}> {
   static navigationOptions = {
-    headerShown: false,
+    title: "Settings",
+    headerTitleStyle: {
+      fontWeight: "bold",
+    },
   }
 
-  onPressClickMe = () => {
+  onPressEditDetails = () => {
+    //go to different screen
     const { actions } = this.props
-    actions.doSomething(5)
+    //actions.doSomething(5)
+    actions.navigate("PersonalDetails")
   }
 
   render() {
-    const { number } = this.props
+    const { firstName, secondName, email } = this.props
+
     return (
       <SettingsComponents.Container>
         <Card.Settings>
-          <Button.Square text="Click me" onPress={this.onPressClickMe}></Button.Square>
-          <Text>{number}</Text>
+          <Header>
+            <Title>Personal Details</Title>
+            <Right />
+          </Header>
+
+          <Text>
+            {firstName} {secondName}
+          </Text>
+          <View></View>
+          <Text>{email}</Text>
+
+          <Button.Square text="Edit" onPress={this.onPressEditDetails}></Button.Square>
         </Card.Settings>
       </SettingsComponents.Container>
     )
@@ -35,7 +54,9 @@ interface IProps extends ReduxProps<typeof mapStateToProps, typeof mapDispatchTo
 
 function mapStateToProps(state: Types.IAppState) {
   return {
-    number: state.settings.number,
+    firstName: state.settings.firstName,
+    secondName: state.settings.secondName,
+    email: state.settings.email,
   }
 }
 

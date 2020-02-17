@@ -6,8 +6,8 @@ const Container: FunctionComponent = props => (
   <View
     style={{
       flex: 1,
+      alignItems: "center",
       backgroundColor: Colors.LINE_COLOR,
-      paddingTop: 200,
     }}
   >
     {props.children}
