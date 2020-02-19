@@ -15,6 +15,7 @@ import Navigation from "src/actions/Navigation"
 import { TextInput, State } from "react-native-gesture-handler"
 import settings from "src/reducers/Settings"
 import types from "src/actions/Settings"
+import Colors from "src/assets/colors"
 
 class PersonalDetails extends Component<IProps, {}> {
   static navigationOptions = {
@@ -48,51 +49,79 @@ class PersonalDetails extends Component<IProps, {}> {
     console.log(firstName)
     return (
       <SettingsComponents.Container>
-        <Card.Settings>
-          <Header>
-            <Body>
-              <Title>First Name</Title>
-              <TextInput
-                style={{ height: 60 }}
-                placeholder={String(firstName)}
-                onChangeText={text => this.setState({ newFirstName: text })}
-              />
-            </Body>
-            <Right />
-          </Header>
-        </Card.Settings>
+        <Card.PersonalDetails>
+          <Title
+            style={{
+              fontWeight: "normal",
+              color: Colors.GREY,
+              fontSize: 15,
+              right: 145,
+            }}
+          >
+            First Name
+          </Title>
+          <TextInput
+            style={{
+              height: 40,
+              fontSize: 18,
+              fontWeight: "bold",
+            }}
+            placeholderTextColor="#000000"
+            placeholder={String(firstName)}
+            onChangeText={text => this.setState({ newFirstName: text })}
+          />
+        </Card.PersonalDetails>
 
-        <Card.Settings>
-          <Header>
-            <Body>
-              <Title>Last Name</Title>
-              <TextInput
-                style={{ height: 60 }}
-                placeholder={String(secondName)}
-                onChangeText={text => this.setState({ newSecondName: text })}
-              />
-            </Body>
-            <Right />
-          </Header>
-        </Card.Settings>
+        <Card.PersonalDetails>
+          <Title
+            style={{
+              fontWeight: "normal",
+              color: Colors.GREY,
+              fontSize: 15,
+              right: 145,
+            }}
+          >
+            Last Name
+          </Title>
+          <TextInput
+            style={{
+              height: 40,
+              fontSize: 18,
+              fontWeight: "bold",
+            }}
+            placeholderTextColor="#000000"
+            placeholder={String(secondName)}
+            onChangeText={text => this.setState({ newSecondName: text })}
+          />
+        </Card.PersonalDetails>
 
-        <Card.Settings>
-          <Header>
-            <Body>
-              <Title>Email Name</Title>
-              <TextInput
-                style={{ height: 60 }}
-                placeholder={String(email)}
-                onChangeText={text => this.setState({ newEmail: text })}
-              />
-            </Body>
-            <Right />
-          </Header>
-        </Card.Settings>
+        <Card.PersonalDetails>
+          <Title
+            style={{
+              fontWeight: "normal",
+              fontSize: 15,
+              right: 165,
+              color: Colors.GREY,
+            }}
+          >
+            Email
+          </Title>
+          <TextInput
+            style={{
+              height: 40,
+              fontSize: 18,
+              fontWeight: "bold",
+            }}
+            placeholderTextColor="#000000"
+            placeholder={String(email)}
+            onChangeText={text => this.setState({ newEmail: text })}
+          />
+        </Card.PersonalDetails>
 
-        <Card.Settings>
-          <Button.Square text="Save" style={{ marginRight: "auto" }} onPress={this.onSaveClick}></Button.Square>
-        </Card.Settings>
+        <Button.Save
+          text={"←                                            Save"}
+          onPress={this.onSaveClick}
+        ></Button.Save>
       </SettingsComponents.Container>
     )
   }

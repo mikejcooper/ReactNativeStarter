@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Text } from "react-native"
+import { Text, ColorPropType } from "react-native"
 import { connect } from "react-redux"
 import { bindActionCreators, Dispatch } from "redux"
 import Actions from "src/actions"
@@ -8,8 +8,7 @@ import { Card } from "src/components/Card"
 import Types from "src/config/types"
 import { SettingsComponents } from "src/screens/settings/components"
 import { Title, View } from "native-base"
-import { Container, Header, Left, Body, Right, Icon } from "native-base"
-import Navigation from "src/actions/Navigation"
+import Colors from "src/assets/colors"
 
 class Settings extends Component<IProps, {}> {
   static navigationOptions = {
@@ -20,9 +19,7 @@ class Settings extends Component<IProps, {}> {
   }
 
   onPressEditDetails = () => {
-    //go to different screen
     const { actions } = this.props
-    //actions.doSomething(5)
     actions.navigate("PersonalDetails")
   }
 
@@ -32,18 +29,51 @@ class Settings extends Component<IProps, {}> {
     return (
       <SettingsComponents.Container>
         <Card.Settings>
-          <Header>
-            <Title>Personal Details</Title>
-            <Right />
-          </Header>
-
-          <Text>
+          <View
+            style={{
+              width: "100%",
+              borderBottomWidth: 1,
+              borderBottomColor: Colors.GREY,
+            }}
+          >
+            <Title
+              style={{
+                width: "100%",
+                right: 110,
+                padding: 5,
+                paddingTop: 20,
+                paddingBottom: 10,
+                // right: 110,
+                fontWeight: "normal",
+                // backgroundColor: Colors.ACCENT_LIGHT_BLUE,
+              }}
+            >
+              Personal Details
+            </Title>
+          </View>
+          <Text
+            style={{
+              padding: 10,
+              paddingTop: 20,
+            }}
+          >
             {firstName} {secondName}
           </Text>
-          <View></View>
-          <Text>{email}</Text>
+          <Text
+            style={{
+              paddingLeft: 8,
+              paddingTop: 20,
+            }}
+          >
+            {" "}
+            {email}
+          </Text>
 
-          <Button.Square text="Edit" onPress={this.onPressEditDetails}></Button.Square>
+          <Button.Square
+            text="Edit"
+            style={{ justifyContent: "flex-end" }}
+            onPress={this.onPressEditDetails}
+          ></Button.Square>
         </Card.Settings>
       </SettingsComponents.Container>
     )
