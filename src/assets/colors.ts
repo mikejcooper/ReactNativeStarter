@@ -5,6 +5,8 @@ const Colors = {
   WHITE: '#FFF',
   BACKGROUND: '#F8F8F8',
   LINE_COLOR: '#E3E3E3',
+  MED_BLUE: '#14719a',
+  BLACK: "#252525"
 
 }
 
