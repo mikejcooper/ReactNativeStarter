@@ -48,4 +48,5 @@ export function getCurrentRouteName(navigationState: any) {
 export const Screens = {
   Splash: "Splash",
   Settings: "Settings",
+  EditPage: "EditPage"
 }

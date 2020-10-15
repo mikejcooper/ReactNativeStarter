@@ -9,12 +9,15 @@ const Settings: FunctionComponent<SettingsProps> = props => (
   <View
     style={[
       {
-        borderRadius: 5,
+        borderRadius: 20,
         backgroundColor: "white",
         elevation: 1,
-        marginVertical: 5,
-        padding: 10,
-        width: "100%",
+        marginVertical: 0,
+        marginLeft: '2.5%',
+        marginBottom: 3,
+        padding: 20,
+        width: "95%",
+        justifyContent: 'center',
       },
       props.style,
     ]}

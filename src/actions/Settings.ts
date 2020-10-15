@@ -2,7 +2,7 @@ export const types = {
   DO_SOMETHING_REQUEST: "@/settings/DO_SOMETHING_REQUEST",
 }
 
-function doSomething(value: number) {
+function doSomething(value: any) {
   return {
     type: types.DO_SOMETHING_REQUEST,
     payload: value,
@@ -10,3 +10,5 @@ function doSomething(value: number) {
 }
 
 export default { doSomething }
+
+
