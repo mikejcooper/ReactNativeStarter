@@ -14,9 +14,13 @@ const Square: FunctionComponent<ButtonProps> = props => (
   <TouchableOpacity
     style={{
       flexDirection: "row",
+      borderColor: Colors.ACCENT_LIGHT_BLUE,
+      borderWidth: 2,
+      borderRadius: 20,
       justifyContent: "center",
-      backgroundColor: Colors.DARK_GREY,
-      width: "100%",
+      backgroundColor: "white",
+      marginLeft: "60%",
+      width: "40%",
       padding: Scale.vs(20),
     }}
     onPress={props.onPress}
@@ -24,8 +28,9 @@ const Square: FunctionComponent<ButtonProps> = props => (
     <Text
       style={{
         fontFamily: Fonts.DEFAULT,
+        fontWeight: 'bold',
         fontSize: Scale.ts(18),
-        color: Colors.BACKGROUND,
+        color: Colors.ACCENT_LIGHT_BLUE,
       }}
     >
       {props.text}

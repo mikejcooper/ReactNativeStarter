@@ -7,7 +7,8 @@ const Container: FunctionComponent = props => (
     style={{
       flex: 1,
       backgroundColor: Colors.LINE_COLOR,
-      paddingTop: 200,
+      paddingTop: 0,
+
     }}
   >
     {props.children}

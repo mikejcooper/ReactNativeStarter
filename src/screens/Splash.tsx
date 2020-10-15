@@ -33,7 +33,7 @@ class Splash extends Component<IProps, {}> {
   }
 }
 
-interface IProps extends ReduxProps<typeof mapStateToProps, typeof mapDispatchToProps> {}
+interface IProps extends ReduxProps<typeof mapStateToProps, typeof mapDispatchToProps> { }
 
 function mapStateToProps(state: Types.IAppState) {
   return {}

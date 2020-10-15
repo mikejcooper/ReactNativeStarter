@@ -1,3 +1,4 @@
+
 import AsyncStorage from "@react-native-community/async-storage"
 import { Root } from "native-base"
 import React, { Component } from "react"
@@ -11,6 +12,7 @@ import NavigatorContainer from "./config/routes/NavigatorContainer"
 import warnings from "./config/utils/errors/Warnings"
 import reducer from "./reducers"
 import rootSaga from "./sagas"
+
 
 const persistConfig = {
   key: "root",
@@ -46,7 +48,8 @@ class App extends Component {
       <Provider store={store}>
         <PersistGate loading={null} persistor={persistor}>
           <Root>
-            <NavigatorContainer />
+            <NavigatorContainer>
+            </NavigatorContainer>
           </Root>
         </PersistGate>
       </Provider>
